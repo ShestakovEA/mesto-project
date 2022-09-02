@@ -11,27 +11,13 @@
 
 <body>
   <div class="page">
-    <div class="popup">
-      <div class="popup__body">
-        <div class="popup__container">
-          <h2 class="popup__title">Редактировать профиль</h2>
-          <form class="form">
-            <input type="text" class="form__text" name="form-edit" placeholder="Жак-Ив Кусто">
-            <input type="text" class="form__text" name="form-edit" placeholder="Исследователь океана">
-            <button type="submit" class="form__button">Сохранить</button>
-          </form>
-          <button type="button" class="popup__button-close"></button>
-        </div>
-
-      </div>
-    </div>
     <header class="header">
-      <img src="./image/logo.svg" alt="логотип" class="header__logo">
+      <img src="./images/logo.svg" alt="логотип" class="header__logo">
     </header>
     <main class="content">
       <section class="profile">
         <div class="profile__info ">
-          <img src="./image/cousteau.jpg" alt="аватар" class="profile__avatar">
+          <img src="./images/cousteau.jpg" alt="аватар" class="profile__avatar">
           <div class="profile__container">
             <div class="profile__container-info">
               <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -41,46 +27,45 @@
           </div>
         </div>
         <button type="button" class="profile__add-button"></button>
-
       </section>
       <section class="photo-grid">
         <article class="photo-grid__card">
-          <img src="./image/photo-grid-dombai.jpg" alt="домбай" class="photo-grid__item">
+          <img src="./images/photo-grid-dombai.jpg" alt="домбай" class="photo-grid__item">
           <div class="photo-grid__container">
             <h2 class="photo-grid__title">Домбай</h2>
             <button type="button" class="photo-grid__button"></button>
           </div>
         </article>
         <article class="photo-grid__card">
-          <img src="./image/photo-grid-dombai.jpg" alt="домбай" class="photo-grid__item">
+          <img src="./images/photo-grid-dombai.jpg" alt="домбай" class="photo-grid__item">
           <div class="photo-grid__container">
             <h2 class="photo-grid__title">Домбай</h2>
-            <button type="button" class="photo-grid__button photo-grid__button_active"></button>
+            <button type="button" class="photo-grid__button"></button>
           </div>
         </article>
         <article class="photo-grid__card">
-          <img src="./image/photo-grid-elbrus.jpg" alt="эльбрус" class="photo-grid__item">
+          <img src="./images/photo-grid-elbrus.jpg" alt="эльбрус" class="photo-grid__item">
           <div class="photo-grid__container">
             <h2 class="photo-grid__title">Гора Эльбрус</h2>
             <button type="button" class="photo-grid__button"></button>
           </div>
         </article>
         <article class="photo-grid__card">
-          <img src="./image/photo-grid-karachaevsk.jpg" alt="карачаево-черкесия" class="photo-grid__item">
+          <img src="./images/photo-grid-karachaevsk.jpg" alt="карачаево-черкесия" class="photo-grid__item">
           <div class="photo-grid__container">
             <h2 class="photo-grid__title">Карачаево-Черкесия</h2>
             <button type="button" class="photo-grid__button"></button>
           </div>
         </article>
         <article class="photo-grid__card">
-          <img src="./image/photo-grid-elbrus.jpg" alt="эльбрус" class="photo-grid__item">
+          <img src="./images/photo-grid-elbrus.jpg" alt="эльбрус" class="photo-grid__item">
           <div class="photo-grid__container">
             <h2 class="photo-grid__title">Эльбрус</h2>
-            <button type="button" class="photo-grid__button photo-grid__button_active"></button>
+            <button type="button" class="photo-grid__button"></button>
           </div>
         </article>
         <article class="photo-grid__card">
-          <img src="./image/photo-grid-karachaevsk.jpg" alt="карачаево-черкесия" class="photo-grid__item">
+          <img src="./images/photo-grid-karachaevsk.jpg" alt="карачаево-черкесия" class="photo-grid__item">
           <div class="photo-grid__container">
             <h2 class="photo-grid__title">Карачаево-Черкесия</h2>
             <button type="button" class="photo-grid__button"></button>
@@ -91,6 +76,17 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
+  </div>
+  <div class="popup">
+    <div class=" popup__container">
+      <h3 class="popup__title">Редактировать профиль</h3>
+      <form class="form" name="form-edit">
+        <input type="text" class="form__text" name="form-edit" placeholder="Жак-Ив Кусто">
+        <input type="text" class="form__text" name="form-edit" placeholder="Исследователь океана">
+        <button type="submit" class="form__button">Сохранить</button>
+      </form>
+      <button type="button" class="popup__button-close"></button>
+    </div>
   </div>
 
 </body>
