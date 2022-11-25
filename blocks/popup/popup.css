@@ -16,4 +16,10 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.popup:hover {
+  opacity: 1;
 }

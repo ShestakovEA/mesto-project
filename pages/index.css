@@ -33,6 +33,8 @@
 @import url("../blocks/photo-grid/__item/photo-grid__item.css");
 @import url("../blocks/photo-grid/__title/photo-grid__title.css");
 @import url("../blocks/photo-grid/__button/photo-grid__button.css");
+@import url("../blocks/photo-grid/__button/_active/photo-grid__button_active.css");
+@import url("../blocks/photo-grid/__trashcan/photo-grid__trashcan.css");
 
 /*-----footer-----*/
 @import url("../blocks/footer/footer.css");
@@ -47,3 +49,7 @@
 @import url("../blocks/form/__text/form__text.css");
 @import url("../blocks/form/__button/form__button.css");
 @import url("../blocks/popup/__button-close/popup__button-close.css");
+@import url("../blocks/popup/__container-img/popup__container-img.css");
+@import url("../blocks/popup/__img/popup__img.css");
+@import url("../blocks/popup/__caption/popup__caption.css");
+@import url("../blocks/popup/_picture/popup_picture.css");

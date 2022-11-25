@@ -1,0 +1,18 @@
+.photo-grid__trashcan {
+  background-image: url(../../../images/trashcan.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 18px;
+  height: 19px;
+  cursor: pointer;
+  border: 0;
+  color: white;
+}
+
+.photo-grid__trashcan:hover {
+  opacity: 60%;
+}

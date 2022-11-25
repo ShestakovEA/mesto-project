@@ -3,9 +3,10 @@
   font-size: 24px;
   line-height: 29px;
   text-align: left;
-  padding: 34px 64px 54px 36px;
+  padding-bottom: 54px;
   margin: 0;
   color: #000;
+  max-width: 358px;
 }
 
 @media screen and (max-width: 700px) {

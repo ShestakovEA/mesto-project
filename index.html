@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
+  <script src="./script.js" defer></script>
   <title>Mesto</title>
 </head>
 
@@ -21,15 +22,15 @@
           <div class="profile__container">
             <div class="profile__container-info">
               <h1 class="profile__title">Жак-Ив Кусто</h1>
-              <button type="button" class="profile__edit-button"></button>
+              <button id="openPopupButton" type="button" class="profile__edit-button"></button>
             </div>
             <p class="profile__text">Исследователь океана</p>
           </div>
         </div>
-        <button type="button" class="profile__add-button"></button>
+        <button id="openPopupAddButton" type="button" class="profile__add-button"></button>
       </section>
       <section class="photo-grid">
-        <article class="photo-grid__card">
+        <!-- <article class="photo-grid__card">
           <img src="./images/photo-grid-dombai.jpg" alt="домбай" class="photo-grid__item">
           <div class="photo-grid__container">
             <h2 class="photo-grid__title">Домбай</h2>
@@ -70,24 +71,55 @@
             <h2 class="photo-grid__title">Карачаево-Черкесия</h2>
             <button type="button" class="photo-grid__button"></button>
           </div>
-        </article>
+        </article>-->
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
   </div>
-  <div class="popup">
+  <div id="popup" class="popup popup-edit">
     <div class="popup__container">
       <h3 class="popup__title">Редактировать профиль</h3>
       <form class="form" name="form-edit">
-        <input type="text" class="form__text" name="form-edit" placeholder="Жак-Ив Кусто">
-        <input type="text" class="form__text" name="form-edit" placeholder="Исследователь океана">
-        <button type="submit" class="form__button">Сохранить</button>
+        <input id="inputName" type="text" class="form__text" name="form-edit" placeholder="Жак-Ив Кусто">
+        <input id="inputJob" type="text" class="form__text" name="form-edit" placeholder="Исследователь океана">
+        <button id="saveButton" type="submit" class="form__button">Сохранить</button>
       </form>
-      <button type="button" class="popup__button-close"></button>
+      <button id="closeButtonEdit" type="button" class="popup__button-close"></button>
     </div>
   </div>
+
+  <div id="popupNewCard" class="popup popup-add">
+    <div class="popup__container">
+      <h3 class="popup__title">Новое место</h3>
+      <form id="addForm" class="form form-add" name="form-add">
+        <input id="inputAddName" type="text" class="form__text" name="form-edit" placeholder="Название">
+        <input id="inputAddLink" type="text" class="form__text" name="form-edit" placeholder="Ссылка на картинку">
+        <button id="createButton" type="submit" class="form__button">Создать</button>
+      </form>
+      <button id="closeButtonAdd" type="button" class="popup__button-close"></button>
+    </div>
+  </div>
+
+  <div id="popupImg" class="popup popup_picture">
+    <div class="popup__container-img">
+      <img src="" alt="фотография" class="popup__img">
+      <p class="popup__caption"></p>
+      <button id="closeButtonImg" type="button" class="popup__button-close"></button>
+    </div>
+  </div>
+
+  <template id="template">
+    <article class="photo-grid__card">
+      <button type="button" class="photo-grid__trashcan"></button>
+      <img src="./images/photo-grid-elbrus.jpg" alt="эльбрус" class="photo-grid__item">
+      <div class="photo-grid__container">
+        <h2 class="photo-grid__title">Эльбрус</h2>
+        <button type="button" class="photo-grid__button"></button>
+      </div>
+    </article>
+  </template>
 
 </body>
 
