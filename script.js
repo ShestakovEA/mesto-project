@@ -102,9 +102,9 @@ const cardAddLink = document.querySelector('#inputAddLink');
 function addCard(evt) {
   evt.preventDefault();
   cardContainer = createCard(cardAddName.value, cardAddLink.value);
-  cardAddForm.reset();
   elementsContainer.prepend(cardContainer);
   closePopup(popupAddCard);
+  cardAddForm.reset();
 }
 
 cardAddForm.addEventListener('submit', addCard);
