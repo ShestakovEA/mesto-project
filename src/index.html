@@ -5,16 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./pages/index.css">
-  <script src="./data.js" defer></script>
-  <script src="./script.js" defer></script>
   <title>Mesto</title>
 </head>
 
 <body>
   <div class="page">
     <header class="header">
-      <img src="./images/logo.svg" alt="логотип" class="header__logo">
+      <img src="<%=require(''./images/logo.svg')%>" alt="логотип" class="header__logo">
     </header>
     <main class="content">
       <section class="profile">
@@ -40,9 +37,11 @@
   <div id="popup" class="popup popup-edit">
     <div class="popup__container">
       <h3 class="popup__title">Редактировать профиль</h3>
-      <form class="form" name="form-edit">
-        <input id="inputName" type="text" class="form__text" name="form-edit" placeholder="Жак-Ив Кусто">
-        <input id="inputJob" type="text" class="form__text" name="form-edit" placeholder="Исследователь океана">
+      <form class="form" name="form-edit" novalidate>
+        <input id="inputName" type="text" class="form__text form__name form__input" name="form-edit" placeholder="Жак-Ив Кусто" minlength="2" maxlength="40" pattern="^[A-Za-zА-Яа-яЁё\s\-]+$" data-error-message="Поле должно содержать только латинские буквы, кириллические буквы, знаки дефиса и пробелы." required>
+        <span class="form__error inputName-error"></span>
+        <input id="inputJob" type="text" class="form__text form__job form__input" name="form-edit" placeholder="Исследователь океана" minlength="2" maxlength="200" pattern="^[A-Za-zА-Яа-яЁё\s\-]+$" data-error-message="Поле должно содержать только латинские буквы, кириллические буквы, знаки дефиса и пробелы." required>
+        <span class="form__error inputJob-error"></span>
         <button id="saveButton" type="submit" class="form__button">Сохранить</button>
       </form>
       <button id="closeButtonEdit" type="button" class="popup__button-close"></button>
@@ -52,9 +51,11 @@
   <div id="popupNewCard" class="popup popup-add">
     <div class="popup__container">
       <h3 class="popup__title">Новое место</h3>
-      <form id="addForm" class="form form-add" name="form-add">
-        <input id="inputAddName" type="text" class="form__text" name="form-edit" placeholder="Название">
-        <input id="inputAddLink" type="text" class="form__text" name="form-edit" placeholder="Ссылка на картинку">
+      <form id="addForm" class="form form-add" name="form-add" novalidate>
+        <input id="inputAddName" type="text" class="form__text form__input" name="form-edit" placeholder="Название" minlength="2" maxlength="30" pattern="^[A-Za-zА-Яа-яЁё\s\-]+$" data-error-message="Поле должно содержать только латинские буквы, кириллические буквы, знаки дефиса и пробелы." required>
+        <span class="form__error inputAddName-error"></span>
+        <input id="inputAddLink" type="url" class="form__text form__input" name="form-edit" placeholder="Ссылка на картинку" required>
+        <span class="form__error inputAddLink-error"></span>
         <button id="createButton" type="submit" class="form__button">Создать</button>
       </form>
       <button id="closeButtonAdd" type="button" class="popup__button-close"></button>

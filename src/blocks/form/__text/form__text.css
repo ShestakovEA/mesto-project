@@ -2,11 +2,6 @@
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
   padding: 0 0 13px 0;
-  margin-bottom: 30px;
-}
-
-.form__text:last-of-type {
-  margin-bottom: 48px;
 }
 
 .form__text::placeholder {
@@ -14,10 +9,4 @@
   font-size: 14px;
   line-height: 17px;
   color: #000;
-}
-
-@media screen and (max-width: 700px) {
-  .form__text:last-of-type {
-    margin-bottom: 45px;
-  }
 }
