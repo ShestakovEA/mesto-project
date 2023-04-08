@@ -2,7 +2,7 @@ import '../pages/index.css';
 import {initialCards, validConfig} from './data.js';
 import {enableValidation} from './validate.js';
 import {elementsContainer, createCard, addCard, cardAddForm, cardAddName, cardAddLink} from './card.js';
-import {openPopup, closePopup,} from './modal.js';
+import {openPopup, closePopup, closePopupEsc, closePopupOverlay} from './modal.js';
 
 // попап 1
 const body = document.querySelector('body');
@@ -70,8 +70,8 @@ document.addEventListener('keydown', closePopupEsc);
 document.addEventListener('mousedown', closePopupOverlay);
 
 //валидация формы «Редактировать профиль»
-const form = document.querySelector('.form');
-const formInput = formElement.querySelector('.form__input');
-const formError = formElement.querySelector(`.${formInput.id}-error`);
+export const form = document.querySelector('.form');
+export const formInput = formElement.querySelector('.form__input');
+export const formError = formElement.querySelector(`.${formInput.id}-error`);
 
 enableValidation(validConfig);

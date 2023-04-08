@@ -1,3 +1,6 @@
+import {validConfig} from './data.js';
+import {form, formInput, formError} from './index.js';
+
 const showInputError = (formElement, inputElement, errorMessage, validConfig) => {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add(validConfig.inputErrorClass);
@@ -31,7 +34,7 @@ const showInputError = (formElement, inputElement, errorMessage, validConfig) =>
     });
   }
   // функция отключения/включения кнопки
-  function toggleButtonState(inputList, buttonElement, settings) {
+  function toggleButtonState(inputList, buttonElement, validConfig) {
     if (hasInvalidInput(inputList)) {
       buttonElement.disabled = true;
     buttonElement.classList.add(validConfig.inactiveButtonClass);

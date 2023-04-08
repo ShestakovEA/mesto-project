@@ -8,7 +8,7 @@ export function closePopup(popup) {
 }
 
 // закрытие попап ESC
-function closePopupEsc (evt) {
+export function closePopupEsc (evt) {
     if ( evt.key === 'Escape'){
      let popupEsc = body.querySelector('.popup_opened');
      closePopup(popupEsc);
@@ -16,7 +16,7 @@ function closePopupEsc (evt) {
 }
 
 // Закрытие попапа кликом на оверлей
-function closePopupOverlay (evt) {
+export function closePopupOverlay (evt) {
     if (evt.target.classList.contains("popup")){
       closePopup(evt.target);
     }
